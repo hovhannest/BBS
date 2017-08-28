@@ -38,3 +38,13 @@ some of the assignments is possible to make with Python. Those who'd like, may w
 
 Installing VM image.
 ====================
+
+As our TA is damaged and unable to prepare the image for you, download any linux virtualbox image from osboxes.org, i suggest gentoo:
+
+http://www.osboxes.org/gentoo.
+
+Username: osboxes
+Password: osboxes.org
+Root Account Password: osboxes.org
+
+Make sure you are able to login.
