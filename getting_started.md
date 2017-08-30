@@ -39,9 +39,34 @@ some of the assignments is possible to make with Python. Those who'd like, may w
 Installing VM image.
 ====================
 
-As our TA is damaged and unable to prepare the image for you, download any linux virtualbox image from osboxes.org, i suggest gentoo:
+Download VirtualBox software from https://www.virtualbox.org/wiki/Downloads
 
-http://www.osboxes.org/gentoo.
+For Windows hosts you probably want http://download.virtualbox.org/virtualbox/5.1.26/VirtualBox-5.1.26-117224-Win.exe
+
+I've prepared an OS image for you to work with.
+
+It's located at http://lab.am/osp/
+
+Save 'gentoo.zip' files somewhere.
+Unzip it.
+
+Run installed virtualbox.
+Click New.
+
+give it some name.
+
+Choose Type - Linux, Version - Gentoo 32 bit.
+
+Choose 'Use an existing virtual hard disk file' and open the file you've downloaded and unpacked.
+
+This should be enough for starting it.
+
+Start the machine, log in as user 'osp', password 'osp'.
+
+Upon login, type 'startx' to start the graphical session.
+
+
+
 
 Username: osboxes
 Password: osboxes.org
