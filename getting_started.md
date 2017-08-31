@@ -36,6 +36,8 @@ some of the assignments is possible to make with Python. Those who'd like, may w
 * * python3
 * * python3-pip
 
+This link can be helpful: https://www.cs.drexel.edu/~kschmidt/Ref/cygwinSetup.html
+
 Installing VM image.
 ====================
 
@@ -64,12 +66,5 @@ This should be enough for starting it.
 Start the machine, log in as user 'osp', password 'osp'.
 
 Upon login, type 'startx' to start the graphical session.
-
-
-
-
-Username: osboxes
-Password: osboxes.org
-Root Account Password: osboxes.org
 
 Make sure you are able to login.
