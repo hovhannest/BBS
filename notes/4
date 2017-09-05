@@ -1,0 +1,26 @@
+how do I make a list of students with random numbers assigned.
+(students directory)
+
+0. copy - paste from the website.
+1. use block select (ctrl+v) to erase information before the first name.
+2. cat list | awk {' print $1 " " $2 '} > list2
+3. this script:
+-----------------
+num="1"
+while read i
+do
+  echo "$num  $i"
+  num=$((num+1))
+done < list2
+-----------------
+
+announcing the [assignment0](https://github.com/osdevnet/assignment0).
+
+what else do we need for completing the assignment.
+echo "aaa" | tr a b
+echo "aaa" | sed 's/a/b/'
+echo "aaa" | sed 's/a/b/g'
+
+uniq
+
+

@@ -1,0 +1,22 @@
+filesystem.
+one tree as an abstraction.
+we can mount devices to any node.
+
+inodes.
+xv inode.jpg
+
+ln
+ln -s examples.
+file
+filesystem.
+number of pointers to the inode.
+difference between soft and hard links.
+
+on windows: fileid, links in NTFS: sysinternals.com
+
+modes: chmod
+ls
+ls -l
+ls -al
+running scripts.
+PATH environment variable.

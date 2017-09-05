@@ -1,0 +1,64 @@
+/bin/login - the executable which implements login prompt.
+the terminal and the shell
+
+why we do use terminal and the shell?
+is terminal a modern or outdated concept?
+the paper, editing previously written commands.
+
+control characters.
+
+ctrl+g  BELL    007     07
+ctrl+h  BS              008     08
+ctrl+i          TAB     009     09
+ctrl+j          LF              010     10
+ctrl+k  VT      011     0A
+ctrl+l          FF              012     0B
+ctrl+m  CR      013     0D
+ctrl+z  SUB     026     16
+ctrl+[          ESC     027     17
+ctrl+?  DEL     127     7F
+
+cat control_characters.
+
+tab for autocomplete.
+
+cd, pwd.
+cd by absolute or relative path.
+
+echo, cat, dog.
+
+ls, ls -t, ls -u, ls -r, ls -rt, ls -rlt.
+
+man ls.
+
+use man.
+man is your friend.
+
+more, less, pipelines.
+
+do one thing and do it good.
+
+why do we need commandline tools. automation.
+
+sort
+
+wc
+
+tail, head.
+
+grep
+
+redirections
+< > |
+stdin, stdout.
+
+grep printf *
+grep write < text
+
+sort file
+
+ls | sort -R
+
+vim
+vimtutor - also your friend.
+
