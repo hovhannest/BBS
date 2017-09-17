@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 #define STDIN  0
 #define STDOUT 1
@@ -15,4 +16,10 @@ int main()
    //....
    write(1, buf, 1);
   }
+  /*buf[0]=0x12;
+  write(1, buf, 1);
+  write(1, buf, 1);
+  write(1, buf, 1);
+  write(1, buf, 1);*/
+  fflush(stdout);
 }
