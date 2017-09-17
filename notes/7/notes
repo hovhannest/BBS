@@ -1,3 +1,11 @@
+noch, do not forget to run ffmpeg to capture the screen.
+
+ffmpeg -y -f x11grab -draw_mouse 1 -framerate 5 -video_size 1024x768 -i :0.0 srceencast.mp4
+
+make
+https://en.wikipedia.org/wiki/Makefile
+https://en.wikipedia.org/wiki/Make_(software)
+https://www.codeproject.com/Articles/31488/Makefiles-in-Linux-An-Overview
 
 rob pike's notes on programming in c
 http://doc.cat-v.org/bell_labs/pikestyle
@@ -90,5 +98,50 @@ http://www.thegeekstuff.com/2013/06/buffer-overflow
 ```
 
 http://groups.google.am/group/comp.lang.oberon/browse_thread/thread/ffe11b45037375e0/e8b65d37114d4931?hl=hy&ie=UTF-8&oe=utf-8&q=andreas+borchert+c+interfaces#e8b65d37114d4931
+
+```
+Consider C's hello.c, usually given as:
+
+        #include <stdio.h>
+        main() {
+                printf("Hello, world\n");
+        }
+
+Very simple and clean, but why use printf if you aren't doing any % formats?
+
+        #include <stdio.h>
+        main() {
+                fputs("Hello, world\n", stdout);
+        }
+
+But, wait, since we want the \n anyway, why use fputs?
+
+        #include <stdio.h>
+        main() {
+                puts("Hello, world.");
+        }
+
+But, wait, why drag in stdio and make our binary bigger?
+
+        #define greeting "Hello, world.\n"
+        main() {
+                write(1, greeting, (sizeof greeting));
+        }
+
+But, wait, what about 16-bit chars?
+
+        #define greeting "Hello, world.\n"
+        main() {
+                write(1, greeting, sizeof(char)*(sizeof greeting));
+        }
+
+But, wait, what about setlocale()?
+
+But, wait, why are we arguing about there being a best way to do a thing,
+or whether there has ever been a language whose libraries were so well-
+considered in the early days that noone ever thought they were ugly later?
+```
+
+https://groups.google.com/d/msg/comp.lang.oberon/8Bmb20Ds8Cg/DO2QwMmGuAQJ
 
 
