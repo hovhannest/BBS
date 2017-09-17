@@ -40,61 +40,6 @@ http://www.thegeekstuff.com/2013/06/buffer-overflow
     (Please note that I do not want to bash Ritchie, Kernighan etc. The
     libc is history and should be taken as such… It is time to abandon
     C and the libc and it does not help to place other systems on top of this historic relic.)
-     The libc is certainly not a good guide:
-
-    * Buffer overruns are not ruled out by design: gets, sscanf etc.
-    * Interface inconsistencies: gets vs fgets, fgets vs fscanf (note
-    the position of the file stream parameter)
-    * Bad interfaces like that of getchar() whose return code
-    can be a character or an error code
-    * Particularly bad buffering system which
-    – ignores the block structure of underlying file systems, and
-    – does not support bidirectional buffering
-    * No provisions exist such that independent libraries can cooperate
-    with each other in
-    – signal handling,
-    – setting up alarms, and
-    – tracking childs.
-
-    (Please note that I do not want to bash Ritchie, Kernighan etc. The
-    libc is history and should be taken as such… It is time to abandon
-    C and the libc and it does not help to place other systems on top of this historic relic.)      The libc is certainly not a good guide:
-
-    * Buffer overruns are not ruled out by design: gets, sscanf etc.
-    * Interface inconsistencies: gets vs fgets, fgets vs fscanf (note
-    the position of the file stream parameter)
-    * Bad interfaces like that of getchar() whose return code
-    can be a character or an error code
-    * Particularly bad buffering system which
-    – ignores the block structure of underlying file systems, and
-    – does not support bidirectional buffering
-    * No provisions exist such that independent libraries can cooperate
-    with each other in
-    – signal handling,
-    – setting up alarms, and
-    – tracking childs.
-
-    (Please note that I do not want to bash Ritchie, Kernighan etc. The
-    libc is history and should be taken as such… It is time to abandon
-    C and the libc and it does not help to place other systems on top of this historic relic.)      The libc is certainly not a good guide:
-
-    * Buffer overruns are not ruled out by design: gets, sscanf etc.
-    * Interface inconsistencies: gets vs fgets, fgets vs fscanf (note
-    the position of the file stream parameter)
-    * Bad interfaces like that of getchar() whose return code
-    can be a character or an error code
-    * Particularly bad buffering system which
-    – ignores the block structure of underlying file systems, and
-    – does not support bidirectional buffering
-    * No provisions exist such that independent libraries can cooperate
-    with each other in
-    – signal handling,
-    – setting up alarms, and
-    – tracking childs.
-
-    (Please note that I do not want to bash Ritchie, Kernighan etc. The
-    libc is history and should be taken as such… It is time to abandon
-    C and the libc and it does not help to place other systems on top of this historic relic.) 
 ```
 
 http://groups.google.am/group/comp.lang.oberon/browse_thread/thread/ffe11b45037375e0/e8b65d37114d4931?hl=hy&ie=UTF-8&oe=utf-8&q=andreas+borchert+c+interfaces#e8b65d37114d4931
