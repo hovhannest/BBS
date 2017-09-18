@@ -6,15 +6,26 @@ make
 https://en.wikipedia.org/wiki/Makefile
 https://en.wikipedia.org/wiki/Make_(software)
 https://www.codeproject.com/Articles/31488/Makefiles-in-Linux-An-Overview
+makefiles:
+http://www.sis.pitt.edu/mbsclass/tutorial/advanced/makefile/whatis.htm
 
 rob pike's notes on programming in c
 http://doc.cat-v.org/bell_labs/pikestyle
 
 i/o in c
 http://users.cs.cf.ac.uk/Dave.Marshall/C/node18.html
+reading from stdin:
+
+read(), gets()
+
+https://stackoverflow.com/questions/15883568/reading-from-stdin
+https://stackoverflow.com/questions/8975521/read-from-stdin
+
 
 hello world examples
 https://helloworldcollection.github.io
+
+
 
 puts()
 gets() <-- ACHTUNG, NEVER USE THIS FUNCTION!!!
