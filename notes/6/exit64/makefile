@@ -1,9 +1,9 @@
-
+ASM = as
 
 all: assemble link
 
 assemble:
-					as -o exit.o exit.s
+					$(ASM) -o exit.o exit.s
 
 link:
 					ld -o exit exit.o
