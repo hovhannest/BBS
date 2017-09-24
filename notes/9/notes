@@ -1,0 +1,32 @@
+file types
+
+* ordinary
+* directories
+* links
+* block and character device files.
+
+ls -al
+
+ordinary files begin with a dash.
+directories begin with 'd'.
+symbolic links begin with 'l'.
+block devices begin with 'b'.
+character devices 'c'.
+pipe file - p
+socket file 's'
+
+
+character devices - printer, terminal.
+
+any character in file except '/' letter.
+
+du -h
+df -h
+
+mkfifo - named pipe.
+
+it can exist even if noone uses   that.
+
+http://tldp.org/LDP/lpg/node11.html
+
+
