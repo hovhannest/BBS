@@ -1,3 +1,29 @@
+IO
+==
+
+You already know stdin/stdout, apparently there is also stderr.
+(to separate error stream from the output stream)
+
+File descriptors:
+
+0 - stdin
+1 - stdout
+2 - stderr
+
+In shell
+
+$ program > output_file.txt 2>&1
+$ program 2>&1 | filter
+
+The 2>&1 syntax indicates that file descriptor 2 ( stderr ) should be merged into file descriptor 1 ( stdout ). Note that 2>&1 must follow a file redirection (the first example) but must precede a pipe redirection (the second example).
+
+Note that stdout is buffered. Data written to stdout is not sent to the console (or other device, if it’s redirected) until the buffer fills, the program exits normally, or stdout is closed.You can explicitly flush the buffer by calling the following:
+```
+fflush (stdout);
+```
+
+In contrast, stderr is not buffered; data written to stderr goes directly to the console.
+
 
 program argument's conventions:
 
