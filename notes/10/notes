@@ -1,3 +1,11 @@
+env
+===
+
+what if we need only one environment variable?
+
+getenv()
+
+
 IO
 ==
 
