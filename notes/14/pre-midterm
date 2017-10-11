@@ -1,0 +1,11 @@
+file redirections, pipes. <, >, |
+working in bash. autocomplete. PATH. env.
+navigating directories: cd, pwd, $OLDPWD
+do one thing - automation of processes.
+more cmdline tools: tail, head, wc, tr, uniq, sort, sed, grep, bc.
+using a pipeline.
+tests the previous command exit status. &&, ||
+file modes. owner, group, others, read, write, execute.
+SUID - set user id on execution.
+Unix filesystem layout. symlinks, hardlinks.
+
