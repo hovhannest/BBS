@@ -1,0 +1,43 @@
+threads
+
+in traditional operating systems, each process has an address space and a single thread of control. that is almost the definition of a process.
+
+there are situations in which it is desirable to have multiple threads of control in the same address space running in quasi-parallel, as though they were separate processes(except for the shared address space). those are usually called 'threads', or 'lightweight processes'.
+
+one way of looking at the process is that it is a way to group related resources together. process has an address space containing
+
+* program text and data
+
+* open files
+
+* child processes
+
+* pending alarms
+
+* signal handlers
+
+and other resources.
+
+by putting them together in a form of process, they (resources) can be managed more easily.
+
+the other concept process has is a thread of execution, usually shortened to just 'thread'.
+
+the thread has
+
+* a program counter (keeps track of which instruction to execute next)
+
+* registers (to hold its current working variables)
+
+* stack (execution history, with one frame for each procedure called but not yet returned from).
+
+Although a thread must execute in some process, the thread and its process are different concepts and can be treated separately. 
+
+----------------------
+
+processes are used to group resources together
+
+threads are the entities scheduled for execution on the cpu
+
+---------------------
+
+

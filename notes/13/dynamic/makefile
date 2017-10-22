@@ -1,7 +1,7 @@
 
 
 all: lib
-		gcc -Wall -L/opt/lib prog.c -lctest -o prog
+		gcc -Wall -L/usr/local/lib prog.c -lctest -o prog
 
 
 lib:
@@ -10,5 +10,5 @@ lib:
 
 install:
 		mv libctest.so.1.0 /usr/local/lib
-		ln -sf /usr/local/lib/libctest.so.1.0 /opt/lib/libctest.so.1
-		ln -sf /usr/local/lib/libctest.so.1.0 /opt/lib/libctest.so
+		ln -sf /usr/local/lib/libctest.so.1.0 /usr/local/lib/libctest.so.1
+		ln -sf /usr/local/lib/libctest.so.1.0 /usr/local/lib/libctest.so
