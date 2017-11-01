@@ -31,5 +31,33 @@ There are two widely used socket types, stream sockets, and datagram sockets. St
 
 Stream sockets use TCP (Transmission Control Protocol), which is a reliable, stream oriented protocol, and datagram sockets use UDP (Unix Datagram Protocol), which is unreliable and message oriented.
 
-
 http://www.linuxhowtos.org/C_C++/socket.htm
+
+
+http://troydhanson.github.io/network/Unix_domain_sockets.html
+
+https://serverfault.com/questions/124517/whats-the-difference-between-unix-socket-and-tcp-ip-socket
+
+speed considerations:
+
+This benchmark: https://github.com/rigtorp/ipc-bench provides latency and throughput tests for TCP sockets, Unix Domain Sockets (UDS), and PIPEs.
+
+Here you have the results on a single CPU 3.3GHz Linux machine :
+
+TCP average latency: 6 us
+
+UDS average latency: 2 us
+
+PIPE average latency: 2 us
+
+TCP average throughput: 253702 msg/s
+
+UDS average throughput: 1733874 msg/s
+
+PIPE average throughput: 1682796 msg/s
+
+https://stackoverflow.com/questions/14973942/performance-tcp-loopback-connection-vs-unix-domain-socket
+
+also four and seven network layers http://www.omnisecu.com/tcpip/tcpip-model.php
+
+application layer demo with telnet to 80 and 25 ports.
