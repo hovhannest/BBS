@@ -1,32 +1,32 @@
-aaronswartz             A+
-adalovelace             A
-adelegoldberg           A+
-alanturing
-alfredaho               A-
-andrewtanenbaum         A+
-andrewtridgell          A-
-avietevanian            A-
-billjoy                 A
-briankernigan           A+
-dennisritchie           A
-donaldknuth             A
-edsgerdijkstra          A
-fabricebellard
-guidovanrossum          A
-hoare                   A-
-jamiezawinski           A+
-jeffreyullman           A
-joearmstrong            A
-johnbackus              A- 
-johnmccarthy
-kenthompson
-linustorvalds           A
-margarethamilton        A
-niklauswirth            A+
-norbertwiener           A+
-paulgraham              A
-paulvixie               A-
-peternaur               A-
-robpike                 A+
-sergeymergelian         A+
-stevewozniak             
+aaronswartz             A+        F         B-
+adalovelace             A         B         F
+adelegoldberg           A+        A+        A+
+alanturing                        F         F
+alfredaho               A-        A-        F
+andrewtanenbaum         A+        A+        A
+andrewtridgell          A-        A-        B+
+avietevanian            A-        A         F
+billjoy                 A         B         B-
+briankernigan           A+        A-        A
+dennisritchie           A         A-        A-
+donaldknuth             A         A+        A
+edsgerdijkstra          A         A-        A+
+fabricebellard                    A         F
+guidovanrossum          A         A+        A
+hoare                   A-        C         
+jamiezawinski           A+        B         D
+jeffreyullman           A         B-        C-
+joearmstrong            A         WIP       WIP
+johnbackus              A-        C+        B-
+johnmccarthy                      F         
+kenthompson                       C         
+linustorvalds           A         F         
+margarethamilton        A         A         
+niklauswirth            A+        B+        
+norbertwiener           A+        A+        A
+paulgraham              A         A         A+
+paulvixie               A-        F         
+peternaur               A-        A+        B+
+robpike                 A+        A-        B-
+sergeymergelian         A+        B         
+stevewozniak                      F         C
