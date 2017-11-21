@@ -9,7 +9,7 @@ int main()
 
   server_name = getenv("SERVER_NAME");
 
-  if (server_name = NULL)
+  if (server_name == NULL)
   {
      // environment variable was not set, use default
      server_name = "aua.am";
