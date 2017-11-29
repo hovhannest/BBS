@@ -1,3 +1,45 @@
+https://en.wikipedia.org/wiki/C10k_problem
+
+from https://softwareengineering.stackexchange.com/questions/181397/many-blocking-vs-single-non-blocking-workers
+
+Many blocking workers are good because:
+
+    It is more responsive.
+    Easier to introduce new connections (workers pick them up them selves rather than outsider waiting till it can add it to a synchronized list).
+    CPU usage balances automatically (without any additional effort) as number of connections increases and decreases.
+    Less CPU usage (blocked threads are taken out of the execution loop and do not require any logic for jumping between clients).
+
+Single non-blocking worker is good because:
+
+    Uses less memory.
+    Less vulnerable to lazy clients (which connect to the server and send headers slowly or don't send at all).
+
+Blocking:
+
+For instance, Apache by default uses a blocking scheme where the process is forked for every connection. That means every connection needs its own memory space and the sheer amount of context-switching overhead increases more as the number of connections increases. But the benefit is, once a connection is closed the context can be disposed and any/all memory can be easily retrieved.
+
+A multi-threaded approach would be similar in that the overhead of context switching increases with the number of connections but may be more memory efficient in a shared context. The problem with such an approach is it's difficult to manage shared memory in a manner that's safe. The approaches to overcome memory synchronization problems often include their own overhead, for instance locking may freeze the main thread on CPU-intensive loads, and using immutable types adds a lot of unnecessary copying of data.
+
+AFAIK, using a multi-process approach on a blocking HTTP server is generally preferred because it's safer/simpler to manage/recovery memory in a manner that's safe. Garbage collection becomes a non-issue when recovering memory is as simple as stopping a process. For long-running processes (ie a daemon) that characteristic is especially important.
+
+While context-switching overhead may seem insignificant with a small number of workers, the disadvantages become more relevant as the load scales up to hundreds-to-thousands of concurrent connections. At best, context switching scales O(n) to the number of workers present but in practice it's most-likely worse.
+
+Where servers that use blocking may not be the ideal choice for IO heavy loads, they are ideal for CPU-intensive work and message passing is kept to a minumum.
+
+Non-Blocking:
+
+Non-blocking would be something like Node.js or nginx. These are especially known for scaling to a much larger number of connections per node under IO-intensive load. Basically, once people hit the upper limit of what thread/process-based servers could handle they started to explore alternative options. This is otherwise known as the C10K problem (ie the ability to handle 10,000 concurrent connections).
+
+Non-blocking async servers generally shares a lot of characteristics with a multi-threaded-with-locking approach in that you have to be careful to avoid CPU-intensive loads because you don't want to overload the main thread. The advantage is that the overhead incurred by context switching is essentially eliminated and with only one context message passing becomes a non-issue.
+
+While it may not work for many networking protocols, HTTPs stateless nature works especially well for non-blocking architectures. By using the combination of a reverse-proxy and multiple non-blocking HTTP servers it's possible to identify and route around the nodes experiencing heavy load.
+
+Even on a server that only has one node, it's very common for the setup to include one server per processor core to maximize throughput.
+
+Both:
+
+The 'ideal' use case would be a combination of both. A reverse proxy at the front dedicated to routing requests at the top, then a mix of blocking and non-blocking servers. Non-blocking for IO tasks like serving static content, cache content, html content. Blocking for CPU-heavy tasks like encoding images/video, streaming content, number crunching, database writes, etc.
+
 
 from http://www.scottklement.com/rpg/socktut/nonblocking.html
 
@@ -11,7 +53,7 @@ By default, TCP sockets are in "blocking" mode. For example, when you call recv(
 
 Going back to the "web browser" example, if you put the socket that was connecting to the web server into non-blocking mode, you could then call connect(), print a message saying "connecting to host www.floofy.com..." then maybe do something else, and them come back to connect() again. If connect() works the second time, you might print "Host contacted, waiting for reply..." and then start calling send() and recv(). If the connect() is still pending, you might check to see if the user has pressed a "abort" button, and if so, call close() to stop trying to connect.
 
-from beej.us	
+from http://beej.us/guide/bgnet/output/html/multipage/advanced.html	
 
  If you don't want a socket to be blocking, you have to make a call to fcntl():
 
@@ -34,7 +76,7 @@ By setting a socket to non-blocking, you can effectively "poll" the socket for i
 
 Generally speaking, however, this type of polling is a bad idea. If you put your program in a busy-wait looking for data on the socket, you'll suck up CPU time like it was going out of style. A more elegant solution for checking to see if there's data waiting to be read comes in the following section on select().
 
-elect()—Synchronous I/O Multiplexing
+select()—Synchronous I/O Multiplexing
 
 This function is somewhat strange, but it's very useful. Take the following situation: you are a server and you want to listen for incoming connections as well as keep reading from the connections you already have.
 
@@ -50,6 +92,29 @@ select() gives you the power to monitor several sockets at the same time. It'll 
 int select(int numfds, fd_set *readfds, fd_set *writefds,
            fd_set *exceptfds, struct timeval *timeout);
 ```
+
+The function monitors "sets" of file descriptors; in particular readfds, writefds, and exceptfds. If you want to see if you can read from standard input and some socket descriptor, sockfd, just add the file descriptors 0 and sockfd to the set readfds. The parameter numfds should be set to the values of the highest file descriptor plus one. In this example, it should be set to sockfd+1, since it is assuredly higher than standard input (0).
+
+When select() returns, readfds will be modified to reflect which of the file descriptors you selected which is ready for reading. You can test them with the macro FD_ISSET(), below.
+
+Before progressing much further, I'll talk about how to manipulate these sets. Each set is of the type fd_set. The following macros operate on this type:
+
+```
+FD_SET(int fd, fd_set *set);	Add fd to the set.
+
+FD_CLR(int fd, fd_set *set);	Remove fd from the set.
+
+FD_ISSET(int fd, fd_set *set);	Return true if fd is in the set.
+
+FD_ZERO(fd_set *set);			Clear all entries from the set.
+```
+
+poll()
+
+http://beej.us/guide/bgnet/output/html/multipage/pollman.html
+
+
+
 
 errno
 

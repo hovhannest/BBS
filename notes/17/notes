@@ -60,6 +60,12 @@ clone() is also used to implement the pthread_create() POSIX function for creati
 Portable programs should call fork() and pthread_create(), not clone().
 
 
+
+fork() is just a particular set of flags to the system call clone(). clone() is general enough to create either a "process" or a "thread" or even weird things that are somewhere between processes and threads (for example, different "processes" that share the same file descriptor table).
+
+Essentially, for every "type" of information associated with an execution context in the kernel, clone() gives you the choice of aliasing that information or copying it. Threads correspond to aliasing, processes correspond to copying. By specifying intermediate combinations of flags to clone(), you can create weird things that aren't threads or processes. You usually shouldn't do this, and I imagine there was some debate during the development of the Linux kernel about whether it should allow for such a general mechanism as clone().
+
+
 https://unix.stackexchange.com/questions/199686/fork-vs-clone-on-2-6-kernel-linux
 
 

@@ -1,6 +1,10 @@
 https://linuxaria.com/howto/linux-memory-management
 
-Linux has this basic rule: a page of free RAM is wasted RAM. RAM is used for a lot more than just user application data. It also stores data for the kernel itself and, most importantly, can mirror data stored on the disk for super-fast access, this is reported usually as “buffers/cache”, “disk cache” or “cached” by top. Cached memory is essentially free, in that it can be replaced quickly if a running (or newly starting) program needs the memory.
+Linux has this basic rule: a page of free RAM is wasted RAM.
+
+getpagesize()
+
+RAM is used for a lot more than just user application data. It also stores data for the kernel itself and, most importantly, can mirror data stored on the disk for super-fast access, this is reported usually as “buffers/cache”, “disk cache” or “cached” by top. Cached memory is essentially free, in that it can be replaced quickly if a running (or newly starting) program needs the memory.
 
 Keeping the cache means that if something needs the same data again, there’s a good chance it will still be in the cache in memory.
 
