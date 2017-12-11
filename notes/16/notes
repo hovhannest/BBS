@@ -61,3 +61,5 @@ https://stackoverflow.com/questions/14973942/performance-tcp-loopback-connection
 also four and seven network layers http://www.omnisecu.com/tcpip/tcpip-model.php
 
 application layer demo with telnet to 80 and 25 ports.
+
+check also: http://wiki.networksecuritytoolkit.org/index.php/LAN_Ethernet_Maximum_Rates,_Generation,_Capturing_%26_Monitoring
