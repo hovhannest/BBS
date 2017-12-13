@@ -4,24 +4,24 @@ adelegoldberg           A+        A+        A+
 alanturing                        F         F
 alfredaho               A-        A-        B
 andrewtanenbaum         A+        A+        A
-andrewtridgell          A-        A-        A-
+andrewtridgell          A-        A-        A-    A
 avietevanian            A-        A         F
 billjoy                 A         B         B-
 briankernigan           A+        A-        A
 dennisritchie           A         A-        A-
 donaldknuth             A         A+        A
 edsgerdijkstra          A         A-        A+
-fabricebellard          B         A         B
-guidovanrossum          A         A+        A
-hoare                   A-        C         
-jamiezawinski           A+        B         D
+fabricebellard          B         A         B     B-
+guidovanrossum          A         A+        A     B+
+hoare                   A-        C               C
+jamiezawinski           A+        B         D     A
 jeffreyullman           A         B-        C-
 joearmstrong            A         A+        B+
 johnbackus              A-        A+        B-
 johnmccarthy                      F         
 kenthompson                       C         
 linustorvalds           A         F         
-margarethamilton        A         A         
+margarethamilton        A         A         F 
 niklauswirth            A+        B+        
 norbertwiener           A+        A+        A
 paulgraham              A         A         A+
@@ -29,4 +29,4 @@ paulvixie               A-        F
 peternaur               A-        A+        A-
 robpike                 A+        A-        B-
 sergeymergelian         A+        B         
-stevewozniak            B+        B+         C
+stevewozniak            B+        B+        C
