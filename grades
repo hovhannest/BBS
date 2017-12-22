@@ -1,7 +1,7 @@
 aaronswartz             A+        A+        B-    A
 adalovelace             A         B         F     B+
 adelegoldberg           A+        A+        A+    A
-alanturing                        F         F     
+alanturing              F         F         F     F
 alfredaho               A-        A-        B-    B-
 andrewtanenbaum         A+        A+        A     A
 andrewtridgell          A-        A-        A-    A+
@@ -19,13 +19,13 @@ jeffreyullman           A         B-        C-    A-
 joearmstrong            A         A+        A-    A+
 johnbackus              A-        A+        B-    A-
 johnmccarthy            F         C         B     C 
-kenthompson                       C         B     B
+kenthompson             F         C         B     B
 linustorvalds           A         F         B-    B
 margarethamilton        A         A         F     B
 niklauswirth            A+        B+        B     B
 norbertwiener           A+        A+        A     A-
 paulgraham              A         A         A+    A+
-paulvixie               A-        F         
+paulvixie               A-        F         F     F 
 peternaur               A-        A+        A-    A
 robpike                 A+        A-        B-    A
 sergeymergelian         A+        B         B     A+
