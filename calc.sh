@@ -33,8 +33,9 @@ fi
 }
 
 add(){
-
-  sm=$(( $j + $i ))
+  #echo "$1 $2 $3 $4"
+  sm=$(( $1 + $2 + $3 + $4  ))
+  return $((sm))
 
 }
 
@@ -54,7 +55,12 @@ do
   grnum2=$?
   tonum $gr3
   grnum3=$?
-  echo "$name $grnum0"
-
+  echo "$name $grnum0 $grnum1 $grnum2 $grnum3"
+  #add $grnum0 $grnum1 $grnum2 $grnum3
+  #sum=$?
+  sum=$(( $grnum0 + $grnum1 + $grnum2 + $grnum3 ))
+  res=`echo "scale=2; $sum / 4" | bc`
+  res_rounded=`printf '%.*f\n' 0 $res`
+  echo "$name $sum $res $res_rounded"
 
 done < grades
