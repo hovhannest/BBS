@@ -1,32 +1,32 @@
-aaronswartz             A+        A+        B-
-adalovelace             A         B         F
-adelegoldberg           A+        A+        A+
-alanturing                        F         F
-alfredaho               A-        A-        B
-andrewtanenbaum         A+        A+        A
-andrewtridgell          A-        A-        A-    A
-avietevanian            A-        A         F
-billjoy                 A         B         B-
-briankernigan           A+        A-        A
-dennisritchie           A         A-        A-
-donaldknuth             A         A+        A
-edsgerdijkstra          A         A-        A+
-fabricebellard          B         A         B     B-
-guidovanrossum          A         A+        A     B+
-hoare                   A-        C               C
-jamiezawinski           A+        B         D     A
-jeffreyullman           A         B-        C-
-joearmstrong            A         A+        B+
-johnbackus              A-        A+        B-
-johnmccarthy                      F         
-kenthompson                       C         
-linustorvalds           A         F         
-margarethamilton        A         A         F 
-niklauswirth            A+        B+        
-norbertwiener           A+        A+        A
-paulgraham              A         A         A+
+aaronswartz             A+        A+        B-    A
+adalovelace             A         B         F     B+
+adelegoldberg           A+        A+        A+    A
+alanturing                        F         F     
+alfredaho               A-        A-        B-    B-
+andrewtanenbaum         A+        A+        A     A
+andrewtridgell          A-        A-        A-    A+
+avietevanian            A-        A         B-    A+
+billjoy                 A         B         B-    B
+briankernigan           A+        A-        A     A+
+dennisritchie           A         A-        A-    C+
+donaldknuth             A         A+        A     A+
+edsgerdijkstra          A         A-        A+    A+
+fabricebellard          B         A         B     A+
+guidovanrossum          A         A+        A     A+
+hoare                   A-        C         B-    C+
+jamiezawinski           A+        B         A-    A
+jeffreyullman           A         B-        C-    A-
+joearmstrong            A         A+        A-    A+
+johnbackus              A-        A+        B-    A-
+johnmccarthy            F         C         B     C 
+kenthompson                       C         B     B
+linustorvalds           A         F         B-    B
+margarethamilton        A         A         F     B
+niklauswirth            A+        B+        B     B
+norbertwiener           A+        A+        A     A-
+paulgraham              A         A         A+    A+
 paulvixie               A-        F         
-peternaur               A-        A+        A-
-robpike                 A+        A-        B-
-sergeymergelian         A+        B         
-stevewozniak            B+        B+        C
+peternaur               A-        A+        A-    A
+robpike                 A+        A-        B-    A
+sergeymergelian         A+        B         B     A+
+stevewozniak            B+        B+        B+    B+
