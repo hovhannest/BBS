@@ -16,7 +16,7 @@ gradesfinal="grades_midterms_final.txt"
 >$gradesout
 >$gradesfinal
 
-while read line
+while read line || [ -n "$line" ]
 do
 
   #awk -F "\"*,\"*" '{print $3}' $m0 
@@ -28,8 +28,7 @@ do
   fi
 done < $m0
 
-
-while read line
+while read line || [ -n "$line" ]
 do
 
   name=`echo $line | awk -F "\"*,\"*" '{print $2}' | tr A-Z a-z`
@@ -40,7 +39,7 @@ do
   fi
 done < $m1
 
-while read line
+while read line || [ -n "$line" ]
 do
 
   name=`echo $line | awk -F "\"*,\"*" '{print $2}' | tr A-Z a-z`
@@ -60,7 +59,7 @@ sort $m2txt.txt > ${m2txt}_sorted.txt
 sed -i 's/rouben_khachatryan/ruben_khachatryan/' ${m0txt}_sorted.txt
 
 
-while read line
+while read line || [ -n "$line" ]
 do
   nm=`echo $line | awk '{print $1}' | tr A-Z a-z`
   gr0=`echo $line | awk '{print $2}' | cut -f1 -d"."`
@@ -77,5 +76,6 @@ do
   echo "$nm $res_rounded" >> $gradesfinal
 done < ${m0txt}_sorted.txt
 
-
+  #virab did not participat any midterm, still need to generate smth
+  echo "virab_gevorgyan@edu.aua.am    59" >> $gradesfinal
 
