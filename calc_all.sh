@@ -2,6 +2,10 @@ midterms="grades_midterms_final.txt"
 final="grades_final.txt"
 homeworks="grades_homeworks_final"
 map="mapping"
+final_all="grades_final_all.txt"
+
+
+>$final_all
 
 while read line || [ -n "$line" ]
 do
@@ -22,7 +26,7 @@ do
   grh_r=`printf '%.*f\n' 0 $grh_`
 
   sum=$(( $grf_r + $grm_r + $grh_r ))
-  echo "$nm $sum" >> grades_all.txt
+  echo "$nm $sum" >> $final_all
 done < $final
 
 
