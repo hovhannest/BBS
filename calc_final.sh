@@ -1,19 +1,17 @@
 
-m0=final.csv
+source ./calc_env.sh
 
-m0txt="grades_final"
-
->$m0txt.txt
+>$final_dst
 
 while read line || [ -n "$line" ]
 do
 
-  #awk -F "\"*,\"*" '{print $3}' $m0 
+  #awk -F "\"*,\"*" '{print $3}' $final_src 
   name=`echo $line | awk -F "\"*,\"*" '{print $2}' | tr A-Z a-z`
   if [[ ${name,,} != "username" ]]
   then
     mark=`echo $line | awk  -F "\"*,\"*" '{print $3}' | awk '{ print $1 }' | cut -f1 -d"."`
-    echo "$name $mark" >> $m0txt.txt
+    echo "$name $mark" >> $final_dst
   fi
-done < $m0
-sort $m0txt.txt -o $m0txt.txt
+done < $final_src
+sort $final_dst -o $final_dst

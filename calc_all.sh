@@ -1,8 +1,4 @@
-midterms="grades_midterms_final.txt"
-final="grades_final.txt"
-homeworks="grades_homeworks_final"
-map="mapping"
-final_all="grades_final_all.txt"
+source ./calc_env.sh
 
 
 >$final_all
@@ -11,10 +7,10 @@ while read line || [ -n "$line" ]
 do
   nm=`echo $line | awk '{print $1}' | tr A-Z a-z`
   grf=`echo $line | awk '{print $2}' | cut -f1 -d"."`
-  grm=`cat $midterms | grep $nm | awk '{print $2}' | cut -f1 -d"."`
+  grm=`cat $midterms_dst | grep $nm | awk '{print $2}' | cut -f1 -d"."`
   name=`cat $map | grep $nm | awk '{print $3}'`
   #echo $name $nm
-  grh=`cat $homeworks | grep $name | awk '{print $2}'`
+  grh=`cat $homeworks_dst | grep $name | awk '{print $2}'`
  
   grf_=`echo "scale=2; $grf / 2" | bc`
   grf_r=`printf '%.*f\n' 0 $grf_`
@@ -27,6 +23,6 @@ do
 
   sum=$(( $grf_r + $grm_r + $grh_r ))
   echo "$nm $sum" >> $final_all
-done < $final
+done < $final_dst
 
 

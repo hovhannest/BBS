@@ -1,3 +1,7 @@
+#import envs
+source ./calc_env.sh
+
+
 tonum(){
 # grades mapping from https://en.wikipedia.org/wiki/Academic_grading_in_the_United_States#Numerical_and_Letter_Grades
 if [ "$1" == "A+" ]; then
@@ -39,6 +43,8 @@ add(){
 
 }
 
+>$homeworks_dst
+
 while read line
 do
   name=`echo $line | awk {' print $1 '}`
@@ -60,6 +66,6 @@ do
   res=`echo "scale=2; $sum / 4" | bc`
   res_rounded=`printf '%.*f\n' 0 $res`
   #echo "$name $sum $res $res_rounded"
-  echo "$name $res_rounded"
+  echo "$name $res_rounded" >> $homeworks_dst
 
-done < grades
+done < $homeworks_src
