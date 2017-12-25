@@ -1,5 +1,5 @@
 andrewtridgell 92
-anna_abajyan@edu.aua.am 92
+stevewozniak 92
 jeffreyullman 90
 fabricebellard 95
 guidovanrossum 96
